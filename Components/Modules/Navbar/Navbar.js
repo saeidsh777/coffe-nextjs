@@ -1,11 +1,9 @@
+import React from 'react'
 import Link from "next/link";
-import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
-export default function Header({children}) {
+export default function Navbar() {
   return (
-    <header>
+    <>
       {/* <!-- Navbar Start --> */}
       <div className="container-fluid p-0 nav-bar">
         <nav className="navbar navbar-expand-lg bg-none navbar-dark py-3">
@@ -33,7 +31,7 @@ export default function Header({children}) {
               <Link href="/about" className="nav-item nav-link">
                 About
               </Link>
-              <Link href="/service" className="nav-item nav-link">
+              <Link href="/services" className="nav-item nav-link">
                 Service
               </Link>
               <Link href="/menu" className="nav-item nav-link">
@@ -48,15 +46,15 @@ export default function Header({children}) {
                   Pages
                 </Link>
                 <div className="dropdown-menu text-capitalize">
-                  <Link href="reservation.html" className="dropdown-item">
+                  <Link href="/reservation" className="dropdown-item">
                     Reservation
                   </Link>
-                  <Link href="testimonial.html" className="dropdown-item">
+                  <Link href="/testimonial" className="dropdown-item">
                     Testimonial
                   </Link>
                 </div>
               </div>
-              <Link href="contact.html" className="nav-item nav-link">
+              <Link href="/contact" className="nav-item nav-link">
                 Contact
               </Link>
             </div>
@@ -64,7 +62,6 @@ export default function Header({children}) {
         </nav>
       </div>
       {/* <!-- Navbar End --> */}
-      {children}
-    </header>
+    </>
   );
 }
