@@ -1,86 +1,45 @@
+import Card from "@/Components/Modules/Card/Card"
 import React from 'react'
 
-export default function Menu() {
+export default function Menu({ menuData }) {
+    
   return (
     <>
-    {/* <!-- Menu Start --> */}
-    <div className="container-fluid pt-5">
+      {/* <!-- Menu Start --> */}
+      <div className="container-fluid pt-5">
         <div className="container">
-            <div className="section-title">
-                <h4 className="text-primary text-uppercase" style={{letterSpacing: "5px"}}>Menu & Pricing</h4>
-                <h1 className="display-4">Competitive Pricing</h1>
+          <div className="section-title">
+            <h4
+              className="text-primary text-uppercase"
+              style={{ letterSpacing: "5px" }}
+            >
+              Menu & Pricing
+            </h4>
+            <h1 className="display-4">Competitive Pricing</h1>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <h1 className="mb-5">Hot Coffee</h1>
+              {menuData
+                .filter((item) => item.type === "hot")
+                .slice(0, 3)
+                .map((item) => (
+                  <Card key={item.id} {...item} />
+                ))}
             </div>
-            <div className="row">
-                <div className="col-lg-6">
-                    <h1 className="mb-5">Hot Coffee</h1>
-                    <div className="row align-items-center mb-5">
-                        <div className="col-4 col-sm-3">
-                            <img className="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt=""/>
-                            <h5 className="menu-price">$5</h5>
-                        </div>
-                        <div className="col-8 col-sm-9">
-                            <h4>Black Coffee</h4>
-                            <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div className="row align-items-center mb-5">
-                        <div className="col-4 col-sm-3">
-                            <img className="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-2.jpg" alt=""/>
-                            <h5 className="menu-price">$7</h5>
-                        </div>
-                        <div className="col-8 col-sm-9">
-                            <h4>Chocolete Coffee</h4>
-                            <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div className="row align-items-center mb-5">
-                        <div className="col-4 col-sm-3">
-                            <img className="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-3.jpg" alt=""/>
-                            <h5 className="menu-price">$9</h5>
-                        </div>
-                        <div className="col-8 col-sm-9">
-                            <h4>Coffee With Milk</h4>
-                            <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-6">
-                    <h1 className="mb-5">Cold Coffee</h1>
-                    <div className="row align-items-center mb-5">
-                        <div className="col-4 col-sm-3">
-                            <img className="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt=""/>
-                            <h5 className="menu-price">$5</h5>
-                        </div>
-                        <div className="col-8 col-sm-9">
-                            <h4>Black Coffee</h4>
-                            <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div className="row align-items-center mb-5">
-                        <div className="col-4 col-sm-3">
-                            <img className="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-2.jpg" alt=""/>
-                            <h5 className="menu-price">$7</h5>
-                        </div>
-                        <div className="col-8 col-sm-9">
-                            <h4>Chocolete Coffee</h4>
-                            <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div className="row align-items-center mb-5">
-                        <div className="col-4 col-sm-3">
-                            <img className="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-3.jpg" alt=""/>
-                            <h5 className="menu-price">$9</h5>
-                        </div>
-                        <div className="col-8 col-sm-9">
-                            <h4>Coffee With Milk</h4>
-                            <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                </div>
+            <div className="col-lg-6">
+              <h1 className="mb-5">Cold Coffee</h1>
+              {menuData
+                .filter((item) => item.type === "col")
+                .slice(0, 3)
+                .map((item) => (
+                  <Card key={item.id} {...item} />
+                ))}
             </div>
+          </div>
         </div>
-    </div>
-    {/* <!-- Menu End --> */}
+      </div>
+      {/* <!-- Menu End --> */}
     </>
-  )
+  );
 }

@@ -8,18 +8,40 @@ import Reservation from "@/Components/Templates/Index/Reservation";
 import Testimonial from "@/Components/Templates/Index/Testimonial";
 import SliderHeader from "@/Components/Templates/Index/SliderHeader";
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <>
       <Header>
         <SliderHeader />
       </Header>
       <About />
-      <OurService />
+      <OurService servicesData={data.servicesData} />
       <Offer />
-      <Menu />
+      <Menu menuData={data.menuData} />
       <Reservation />
-      <Testimonial />
+      <Testimonial commentData={data.commentData} />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const servicesRes = await fetch("http://localhost:4000/services");
+  const servicesData = await servicesRes.json();
+  
+  const menuRes = await fetch("http://localhost:4000/menu");
+  const menuData = await menuRes.json();
+  
+  const commentRes = await fetch("http://localhost:4000/comment");
+  const commentData = await commentRes.json();
+
+  return {
+    props: {
+      data: {
+        servicesData,
+        menuData,
+        commentData
+      },
+    },
+    revalidate: 60 * 60 * 24,
+  };
 }

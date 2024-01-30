@@ -1,0 +1,193 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "title": "Black Coffee",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "price": 8,
+      "src": "/img/menu-1.jpg",
+      "off": 0,
+      "type": "hot"
+    },
+    {
+      "id": 2,
+      "title": "Chocolete Coffee",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "price": 3,
+      "src": "/img/menu-2.jpg",
+      "off": 0,
+      "type": "hot"
+    },
+    {
+      "id": 3,
+      "title": "tea",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "price": 5,
+      "src": "/img/menu-2.jpg",
+      "off": 0,
+      "type": "hot"
+    },
+    {
+      "id": 4,
+      "title": "milk",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "price": 20,
+      "src": "/img/menu-2.jpg",
+      "off": 0,
+      "type": "col"
+    },
+    {
+      "id": 5,
+      "title": "wather",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "price": 18,
+      "src": "/img/menu-2.jpg",
+      "off": 0,
+      "type": "col"
+    },
+    {
+      "id": 6,
+      "title": "Ab Mive",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "price": 17,
+      "src": "/img/menu-2.jpg",
+      "off": 0,
+      "type": "col"
+    },
+    {
+      "id": 7,
+      "title": "Drik",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "price": 70,
+      "src": "/img/menu-2.jpg",
+      "off": 0,
+      "type": "col"
+    },
+    {
+      "id": 8,
+      "title": "Dark Drink",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "price": 40,
+      "src": "/img/menu-2.jpg",
+      "off": 0,
+      "type": "hot"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "src": "/img/service-1.jpg",
+      "icon": "faTruck",
+      "title": "Fastest Door Delivery",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diamipsum takima erat tempor"
+    },
+    {
+      "id": "2",
+      "src": "/img/service-2.jpg",
+      "icon": "faCoffee",
+      "title": "Fastest Door Delivery",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diamipsum takima erat tempor"
+    },
+    {
+      "id": "3",
+      "src": "/img/service-3.jpg",
+      "icon": "faAward",
+      "title": "Best Quality Coffee",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diamipsum takima erat tempor"
+    },
+    {
+      "id": "4",
+      "src": "/img/service-4.jpg",
+      "icon": "faTable",
+      "title": "Online Table Booking",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diamipsum takima erat tempor"
+    }
+  ],
+  "newsLetters": [
+    {
+      "id": 1,
+      "email": "amin@gmail.com"
+    },
+    {
+      "id": 2,
+      "email": "qadir@gmail.com"
+    },
+    {
+      "id": 3639726814,
+      "email": "saeid@gmail.com"
+    },
+    {
+      "id": 896693550,
+      "email": "saeid@gmail.com"
+    },
+    {
+      "id": 5233834685,
+      "email": "mehrnoosh@gmail.com"
+    },
+    {
+      "id": "c2f3",
+      "email": "dena@gmail.com"
+    },
+    {
+      "id": "5bc8",
+      "email": "ava@gmail.com"
+    }
+  ],
+  "comment": [
+    {
+      "id": 1,
+      "username": "Q_Yolme",
+      "body": "Perfect Coffee :))",
+      "desc":"Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "src":"/img/testimonial-1.jpg",
+      "productID": 1,
+      "score": 5
+    },
+    {
+      "id": 2,
+      "username": "Amin_Saeedi",
+      "body": "Perfect Coffee :))",
+      "desc":"Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "src":"/img/testimonial-2.jpg",
+      "productID": 2,
+      "score": 4.5
+    },
+    {
+      "id": 3,
+      "username": "Saeid_Shojaei",
+      "body": "No Bad :))",
+      "desc":"Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "src":"/img/testimonial-3.jpg",
+      "productID": 3,
+      "score": 4
+    },
+    {
+      "id": 4,
+      "username": "Mehrnoosh_Mandipour",
+      "body": "Yeeees Goooooood",
+      "desc":"Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "src":"/img/testimonial-4.jpg",
+      "productID": 4,
+      "score": 5
+    },
+    {
+      "id": 5,
+      "username": "Mehrnoosh_Mandipour",
+      "body": "Yeeees Goooooood",
+      "desc":"Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "src":"/img/testimonial-4.jpg",
+      "productID": 4,
+      "score": 5
+    }
+  ],
+
+  "reservation": [
+    {
+      "id": "8bf8",
+      "name": "sa",
+      "email": "as@gmail.com",
+      "date": "asas",
+      "time": "as"
+    }
+  ]
+}

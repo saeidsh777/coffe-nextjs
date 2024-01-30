@@ -1,8 +1,30 @@
 import React from "react";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useForm } from "@/hooks/useForm";
 
 export default function Reservation() {
+  const [formSatet, onValueChange] = useForm({
+    name: "",
+    email: "",
+    date: "",
+    time: "",
+  });
+
+  let { name, email, date, time } = formSatet;
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    console.log(formSatet.inputs);
+    const postinformations = fetch("http://localhost:4000/reservation",{
+      method: "POST",
+      headers:{
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(formSatet.inputs)
+    });
+  };
+
   return (
     <>
       {/* <!-- Reservation Start --> */}
@@ -52,13 +74,15 @@ export default function Reservation() {
                   style={{ background: "rgba(51, 33, 29, .8)" }}
                 >
                   <h1 className="text-white mb-4 mt-5">Book Your Table</h1>
-                  <form className="mb-5">
+                  <form className="mb-5" onSubmit={submitForm}>
                     <div className="form-group">
                       <input
                         type="text"
                         className="form-control bg-transparent border-primary p-4"
                         placeholder="Name"
                         required="required"
+                        value={name}
+                        onChange={(e) => onValueChange(e.target.value, "name")}
                       />
                     </div>
                     <div className="form-group">
@@ -67,6 +91,8 @@ export default function Reservation() {
                         className="form-control bg-transparent border-primary p-4"
                         placeholder="Email"
                         required="required"
+                        value={email}
+                        onChange={(e) => onValueChange(e.target.value, "email")}
                       />
                     </div>
                     <div className="form-group">
@@ -81,6 +107,10 @@ export default function Reservation() {
                           placeholder="Date"
                           data-target="#date"
                           data-toggle="datetimepicker"
+                          value={date}
+                          onChange={(e) =>
+                            onValueChange(e.target.value, "date")
+                          }
                         />
                       </div>
                     </div>
@@ -96,6 +126,10 @@ export default function Reservation() {
                           placeholder="Time"
                           data-target="#time"
                           data-toggle="datetimepicker"
+                          value={time}
+                          onChange={(e) =>
+                            onValueChange(e.target.value, "time")
+                          }
                         />
                       </div>
                     </div>
@@ -103,8 +137,9 @@ export default function Reservation() {
                       <select
                         className="custom-select bg-transparent border-primary px-4"
                         style={{ height: "49px" }}
+                        defaultValue="-1"
                       >
-                        <option selected>Person</option>
+                        <option value="-1">Person</option>
                         <option value="1">Person 1</option>
                         <option value="2">Person 2</option>
                         <option value="3">Person 3</option>
