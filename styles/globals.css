@@ -3242,6 +3242,7 @@ input[type="button"].btn-block {
   white-space: nowrap;
 }
 
+
 .dropdown-toggle::after {
   display: inline-block;
   margin-left: 0.255em;
@@ -10012,6 +10013,29 @@ h6,
   background: #da9f5b;
 }
 
+.search_icon {
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+  color: white;
+  top: 25px;
+}
+
+.search_input {
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  outline: 0;
+  color: white;
+  padding-bottom: 11px;
+  padding-right: 35px;
+  position: relative;
+  bottom: 3px;
+}
+.search_input::placeholder {
+  color: white;
+}
+
 .menu-price {
   position: absolute;
   margin: 0;
@@ -10070,3 +10094,6 @@ h6,
   background-size: cover;
 }
 
+.dropdown:hover .dropdown-menu{
+  display: block !important;
+}

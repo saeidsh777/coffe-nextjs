@@ -17,7 +17,7 @@ export default function OurService({ servicesData }) {
             <h1 className="display-4">Fresh & Organic Beans</h1>
           </div>
           <div className="row">
-            {servicesData.map((item) => (
+            {servicesData.slice(0,4).map((item) => (
               <ServeceItem key={item.id}
                 src={item.src}
                 icon={item.icon}
